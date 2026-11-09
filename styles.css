@@ -222,14 +222,14 @@ body { background: radial-gradient(ellipse 65rem 35rem at 82% 0, var(--halo), tr
 .contacto__correo { max-width: 100%; }
 .proyecto__visual { container-type: inline-size; }
 .proyecto__lema { font-size: clamp(1.55rem, 14cqi, 4.25rem); }
-@media (min-width: 971px) and (max-width: 1160px) {
+@media (970px < width <= 1160px) {
   .cabecera__fila { gap: .75rem; }
   .cabecera__nav { gap: .85rem; }
   .cabecera__nav a { font-size: .9rem; }
   .cabecera__atajo { display: none; }
   .panel__cuerpo { grid-template-columns: 1fr; }
 }
-@media (min-width: 641px) and (max-width: 970px) {
+@media (640px < width <= 970px) {
   .portada { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
   #aprendizaje .cuadricula { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #aprendizaje .cuadricula > :last-child { grid-column: 1 / -1; min-height: auto; }
@@ -288,7 +288,7 @@ h2 { text-wrap: balance; }
 .contacto__acciones { max-width: 100%; }
 .pie__fila { grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: 1rem var(--separacion); }
 .pie__nav a { max-width: 100%; }
-@media (min-width: 641px) and (max-width: 970px) {
+@media (640px < width <= 970px) {
   .panel--portada { min-height: 0; }
 }
 @media (max-width: 640px) {
@@ -301,4 +301,25 @@ h2 { text-wrap: balance; }
 }
 @media (max-width: 360px) {
   .pie__fila { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Adaptación de la composición a anchos intermedios y estrechos */
+@media (640px < width <= 760px) {
+  .portada, .perfil { grid-template-columns: minmax(0, 1fr); }
+  .panel__cuerpo { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); }
+  .panel--perfil { min-height: 0; }
+}
+@media (max-width: 640px) {
+  .cabecera__fila { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+  .cabecera__marca { min-width: 0; line-height: 1.2; overflow-wrap: anywhere; }
+  .cabecera__acciones { flex-wrap: nowrap; }
+  .cabecera__nav { grid-column: 1 / -1; }
+  .panel__barra { flex-wrap: wrap; }
+  .panel__barra > :last-child { margin-inline-start: auto; }
+  .contacto__acciones { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 360px) {
+  .portada h1 { font-size: clamp(1.7rem, 9.5vw, 2.2rem); }
+  .proyecto__lema { font-size: clamp(1.3rem, 13cqi, 2rem); }
+  .portada__acciones .boton { flex: 1 1 auto; }
 }
