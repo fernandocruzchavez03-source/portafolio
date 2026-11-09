@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio personal de Fernando Cruz. Diseño, desarrollo web y proyectos propios.">
+  <title>Fernando Cruz · Portafolio personal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="inicio">
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="cabecera__fila contenedor">
+      <a class="cabecera__marca" href="#inicio"><span aria-hidden="true">FC</span> Fernando Cruz</a>
+      <nav class="cabecera__nav" id="navegacion" aria-label="Principal">
+        <a href="#inicio">Inicio</a><a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#aprendizaje">Aprendizaje</a><a href="#contacto">Contacto</a>
+      </nav>
+      <div class="cabecera__acciones">
+        <button class="boton" id="tema" type="button" hidden>Modo claro</button>
+        <button class="boton cabecera__menu" id="menu" type="button" aria-controls="navegacion" aria-expanded="false" hidden>Menú</button>
+        <a class="boton boton--contraste cabecera__atajo" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+  <main class="contenedor" id="contenido" tabindex="-1">
+    <section class="portada" aria-labelledby="nombre">
+      <div>
+        <p class="rotulo">Diseño de interfaces y desarrollo web</p>
+        <h1 id="nombre">Fernando Cruz</h1>
+        <p class="portada__resumen">Aprendo a diseñar y programar construyendo proyectos propios. Este es mi espacio para compartirlos.</p>
+        <div class="portada__acciones">
+          <a class="boton boton--acento" href="#proyectos" aria-label="Ir a proyectos">↗</a>
+          <a class="boton" href="#proyectos">Ver portafolio</a>
+        </div>
+      </div>
+      <div class="panel panel--portada">
+        <div class="portada__trama" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="panel__barra"><span class="etiqueta etiqueta--punto">Vista conceptual</span><span>UI / WEB</span></div>
+        <div class="panel__cuerpo">
+          <div>
+            <p class="panel__titular">Diseño y código en un mismo espacio.</p>
+            <p>De los primeros prototipos a sitios que se adaptan a cada pantalla.</p>
+            <div class="etiquetas"><span class="etiqueta">UI</span><span class="etiqueta">Web</span></div>
+          </div>
+          <div class="tablero">
+            <div class="panel__barra"><span class="etiqueta">Panel</span><span>Portafolio</span></div>
+            <div class="tablero__cuadricula">
+              <div class="tablero__dato"><small>Proyectos</small><strong>04</strong></div>
+              <div class="tablero__dato"><small>Enfoque</small><strong>Web</strong></div>
+              <div class="tablero__dato"><small>Origen</small><strong>NL, MX</strong></div>
+              <div class="tablero__dato"><small>Proceso</small><strong>Diseño</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="seccion" id="aprendizaje" aria-labelledby="titulo-aprendizaje">
+      <p class="rotulo">Aprendizaje</p>
+      <h2 id="titulo-aprendizaje">Lo que desarrollo</h2>
+      <div class="cuadricula">
+        <article class="panel panel--ficha"><div class="panel__barra"><span class="etiqueta">Web</span><span>HTML / CSS / JS</span></div><div><h3>Desarrollo web</h3><p>Sitios que se adaptan a distintas pantallas, con estructura clara y controles accesibles.</p></div><div class="etiquetas"><span class="etiqueta">Responsive</span><span class="etiqueta">Accesibilidad</span></div></article>
+        <article class="panel panel--ficha"><div class="panel__barra"><span class="etiqueta">UI</span><span>Diseño</span></div><div><h3>Diseño de interfaces</h3><p>Jerarquía, tipografía y componentes para que una página sea fácil de entender y recorrer.</p></div><div class="etiquetas"><span class="etiqueta">Figma</span><span class="etiqueta">Prototipos</span></div></article>
+        <article class="panel panel--ficha"><div class="panel__barra"><span class="etiqueta">Práctica</span><span>Proyectos propios</span></div><div><h3>Experimentación</h3><p>Pruebo ideas con proyectos de distintos temas, desde un sitio para una cafetería hasta una interfaz de finanzas. También uso Blender para modelado 3D.</p></div><div class="etiquetas"><span class="etiqueta">Blender</span><span class="etiqueta">Interfaces</span></div></article>
+      </div>
+    </section>
+    <section class="seccion" id="sobre-mi" aria-labelledby="titulo-perfil">
+      <p class="rotulo">Acerca de</p>
+      <h2 id="titulo-perfil">Sobre mí</h2>
+      <div class="perfil">
+        <div class="panel panel--perfil">
+          <div class="panel__barra"><span class="etiqueta">Mi proceso</span><span>De la idea al sitio</span></div>
+          <div class="tablero"><p class="rotulo">Cuaderno de trabajo</p><p class="panel__titular">Prototipo, construyo y reviso.</p><div class="tablero__cuadricula"><div class="tablero__dato"><small>01 / Diseño</small><strong>Organizar</strong></div><div class="tablero__dato"><small>02 / Código</small><strong>Probar</strong></div></div></div>
+        </div>
+        <div class="perfil__texto"><h3>Diseño y desarrollo para aprender haciendo.</h3><p>Soy Fernando Cruz, tengo 13 años y soy de Nuevo León, México. Empecé a construir sitios para entender cómo se conectan las decisiones de diseño con lo que ocurre en el navegador. También sé usar Blender para modelado 3D.</p><p>Mis proyectos me dejan practicar problemas distintos. En Alba Café, el punto de partida es cómo llevar la identidad de una cafetería a la web. En Exclusive Clean, el reto es organizar los servicios para que se encuentren con facilidad. Con FinanceTrack exploro cómo mostrar información financiera de forma clara, y JARVIS NEXUS es mi espacio para probar ideas de interfaz.</p><a class="boton" href="#proyectos">Conoce mis proyectos <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+    <section class="seccion" id="proyectos" aria-labelledby="titulo-proyectos">
+      <p class="rotulo">Portafolio</p>
+      <h2 id="titulo-proyectos">Proyectos seleccionados</h2>
+      <div class="cuadricula cuadricula--proyectos">
+        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">01 / Web</span><span>Cafetería</span></div><div class="proyecto__visual proyecto__visual--alba" aria-hidden="true"><span class="proyecto__serie">01 / CAFÉ</span><span class="proyecto__lema">Alba<em>Café</em></span><span class="proyecto__taza"></span></div><div><h3>Alba Café</h3><p>Propuesta web para una cafetería, con el café como punto de partida para su identidad visual.</p></div><div class="etiquetas"><span class="etiqueta">Diseño web</span><span class="etiqueta">Identidad</span></div></div><div class="proyecto__pie"><span>Alba Café</span><a href="https://fernandocruzchavez03-source.github.io/Alba-Cafe-etapa3/" aria-label="Visitar Alba Café">Ver sitio ↗</a></div></article>
+        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">02 / Web</span><span>Sitio publicado</span></div><div class="proyecto__visual proyecto__visual--clean" aria-hidden="true"><span class="proyecto__serie">02 / WEB</span><span class="proyecto__lema">Exclusive<em>Clean</em></span></div><div><h3>Exclusive Clean</h3><p>Sitio que presenta servicios de limpieza y organiza su información para que se pueda consultar con facilidad.</p></div><div class="etiquetas"><span class="etiqueta">Sitio web</span></div></div><div class="proyecto__pie"><span>Exclusive Clean</span><a href="https://fernandocruzchavez03-source.github.io/Exclusive-Clean/" aria-label="Visitar Exclusive Clean">Ver sitio ↗</a></div></article>
+        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">03 / Interfaz</span><span>Finanzas</span></div><div class="proyecto__visual proyecto__visual--finance" aria-hidden="true"><span class="proyecto__serie">03 / PANEL</span><span class="proyecto__lema">Finance<em>Track</em></span><div class="proyecto__barras"><i></i><i></i><i></i><i></i><i></i></div></div><div><h3>FinanceTrack</h3><p>Proyecto sobre el seguimiento de las finanzas personales y la presentación clara de esa información.</p></div><div class="etiquetas"><span class="etiqueta">Panel</span><span class="etiqueta">Finanzas</span></div></div><p class="proyecto__pie">FinanceTrack <span>Proyecto personal</span></p></article>
+        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">04 / Práctica</span><span>Experimental</span></div><div class="proyecto__visual proyecto__visual--nexus" aria-hidden="true"><span class="proyecto__serie">04 / LAB</span><span class="proyecto__lema">JARVIS<em>NEXUS</em></span><span class="proyecto__nucleo"></span></div><div><h3>JARVIS NEXUS</h3><p>Proyecto personal para explorar ideas de tecnología e interfaces.</p></div><div class="etiquetas"><span class="etiqueta">Experimentación</span></div></div><p class="proyecto__pie">JARVIS NEXUS <span>Proyecto personal</span></p></article>
+      </div>
+    </section>
+    <section class="seccion" aria-labelledby="titulo-preguntas">
+      <p class="rotulo">Mi trabajo</p>
+      <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+      <div class="preguntas">
+        <details open><summary>¿Qué estoy aprendiendo?</summary><p>Diseño de interfaces y desarrollo de sitios que se adapten a distintos dispositivos.</p></details>
+        <details><summary>¿Cómo empiezo un proyecto?</summary><p>Primero organizo el contenido. Luego preparo una primera versión, la pruebo y ajusto lo que no funciona bien.</p></details>
+        <details><summary>¿Dónde puedo ver un sitio publicado?</summary><p>En la ficha de Exclusive Clean encontrarás el enlace al sitio.</p></details>
+        <details><summary>¿Cómo cambio el tema?</summary><p>Usa el botón de la cabecera. El sitio guarda tu preferencia cuando el navegador lo permite.</p></details>
+      </div>
+    </section>
+    <section class="seccion contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="panel contacto__panel">
+        <div>
+          <p class="rotulo">Contacto</p>
+          <h2 id="titulo-contacto">Hablemos</h2>
+          <p class="contacto__texto">Si quieres comentar alguno de mis proyectos o tienes una pregunta sobre cómo lo hice, puedes escribirme por correo.</p>
+        </div>
+        <div class="contacto__acciones">
+          <a class="boton boton--contraste" href="mailto:fernandocruzchavez03@gmail.com">Escríbeme <span aria-hidden="true">↗</span></a>
+          <a class="contacto__correo" href="mailto:fernandocruzchavez03@gmail.com">fernandocruzchavez03@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="pie contenedor">
+    <div class="pie__fila">
+      <div class="pie__identidad">
+        <p class="rotulo">Portafolio personal</p>
+        <p class="pie__titulo">Fernando Cruz</p>
+        <p class="pie__ubicacion">Nuevo León, México</p>
+      </div>
+      <nav class="pie__nav" aria-labelledby="pie-explorar">
+        <h2 id="pie-explorar">Explorar</h2>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#aprendizaje">Aprendizaje</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <nav class="pie__nav" aria-labelledby="pie-sitios">
+        <h2 id="pie-sitios">Sitios publicados</h2>
+        <a href="https://fernandocruzchavez03-source.github.io/Alba-Cafe-etapa3/">Alba Café <span aria-hidden="true">↗</span></a>
+        <a href="https://fernandocruzchavez03-source.github.io/Exclusive-Clean/">Exclusive Clean <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="pie__cierre">
+      <span class="etiqueta etiqueta--punto">Portafolio personal</span>
+      <a class="boton" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
+
+
