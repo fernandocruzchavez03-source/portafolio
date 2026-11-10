@@ -169,7 +169,7 @@ h3 { font-size: clamp(1.17rem, 1.6vw, 1.75rem); line-height: 1.25; letter-spacin
   .pie__identidad { grid-column: 1 / -1; }
 }
 
-/* Acentos suaves de la Edición 03 */
+/* <-------- Acentos suaves de la Edición 03 -------------> */
 :root {
   --halo: #49308d26;
   --matiz: #8873d928;
@@ -214,7 +214,7 @@ body { background: radial-gradient(ellipse 65rem 35rem at 82% 0, var(--halo), tr
 .contacto__acciones { display: grid; justify-items: start; gap: .6rem; min-width: 0; }
 .contacto__correo { overflow-wrap: anywhere; }
 
-/* Ajustes de composición según el espacio disponible */
+/* <-------- Ajustes de composición según el espacio disponible -------------> */
 .portada > *, .panel__cuerpo > *, .perfil > *, .pie__fila > *,
 .cuadricula > *, .preguntas > *, .contacto__panel > * { min-width: 0; }
 .panel__barra > :last-child { min-width: 0; text-align: right; overflow-wrap: anywhere; }
@@ -251,7 +251,7 @@ body { background: radial-gradient(ellipse 65rem 35rem at 82% 0, var(--halo), tr
   .proyecto__taza { right: 8%; height: 68%; top: 16%; }
 }
 
-/* Alineación general */
+/* <-------- Alineación general -------------> */
 :root {
   --margen: clamp(1rem, 3.2vw, 4rem);
   --separacion: clamp(1rem, 2.2vw, 2rem);
@@ -303,7 +303,7 @@ h2 { text-wrap: balance; }
   .pie__fila { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* Adaptación de la composición a anchos intermedios y estrechos */
+/* <-------- Adaptación de la composición a anchos intermedios y estrechos -------------> */
 @media (640px < width <= 760px) {
   .portada, .perfil { grid-template-columns: minmax(0, 1fr); }
   .panel__cuerpo { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); }
@@ -322,4 +322,92 @@ h2 { text-wrap: balance; }
   .portada h1 { font-size: clamp(1.7rem, 9.5vw, 2.2rem); }
   .proyecto__lema { font-size: clamp(1.3rem, 13cqi, 2rem); }
   .portada__acciones .boton { flex: 1 1 auto; }
+}
+
+/* <-------- Movimiento opcional -------------> */
+@media (prefers-reduced-motion: no-preference) {
+  .entrada { animation: entrada-suave 480ms ease-out both; }
+  .boton { transition: border-color 180ms ease, translate 180ms ease; }
+  .proyecto .panel { transition: border-color 180ms ease; }
+  .proyecto:focus-within .panel { border-color: var(--foco); }
+  @media (hover: hover) {
+    .boton:hover { translate: 0 -2px; }
+    .proyecto:hover .panel { border-color: var(--foco); }
+  }
+  @keyframes entrada-suave {
+    from { opacity: .72; translate: 0 10px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+}
+
+/* <-------- Navegación flotante de vidrio -------------> */
+:root {
+  --vidrio: #191822e8;
+  --vidrio-borde: #c8baff40;
+  --vidrio-sombra: #05040b70;
+}
+:root[data-theme="light"] {
+  --vidrio: #fcfaffed;
+  --vidrio-borde: #624ab037;
+  --vidrio-sombra: #30205224;
+}
+html { scroll-padding-top: 8rem; }
+.cabecera {
+  position: sticky;
+  top: .8rem;
+  z-index: 10;
+  margin-block: .8rem 0;
+  border: 0;
+}
+.salto { z-index: 11; }
+.cabecera__fila {
+  min-height: 4.5rem;
+  padding: .55rem clamp(.7rem, 2vw, 1.55rem);
+  border: 1px solid var(--vidrio-borde);
+  border-radius: 2rem;
+  background: var(--vidrio);
+  box-shadow: 0 .6rem 1.85rem var(--vidrio-sombra), inset 0 1px #ffffff1c;
+}
+@supports (backdrop-filter: blur(1px)) {
+  .cabecera__fila {
+    background: color-mix(in srgb, var(--vidrio) 82%, transparent);
+    backdrop-filter: blur(20px) saturate(145%);
+  }
+}
+.cabecera__acciones .boton { border-radius: 999px; }
+.cabecera[data-oculta]:not(:focus-within):not(:has(#menu[aria-expanded="true"])) {
+  transform: translateY(calc(-100% - 2rem));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cabecera { transition: transform 220ms ease; }
+}
+@media (max-width: 970px) {
+  .cabecera__fila { border-radius: 1.4rem; }
+  .cabecera__nav { border-top: 1px solid var(--vidrio-borde); padding-top: .4rem; }
+}
+@media (max-width: 640px) {
+  .cabecera { top: .45rem; margin-top: .45rem; }
+  .cabecera__fila { min-height: 3.55rem; }
+}
+
+/* <-------- Cuadrículas y filas flexibles -------------> */
+.cabecera__acciones { justify-content: flex-end; }
+.proyecto__pie { align-content: center; }
+@media (min-width: 971px) {
+  .cabecera__fila {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+  .cabecera__marca { justify-self: start; }
+  .cabecera__nav { justify-content: center; }
+  .cabecera__acciones { justify-self: end; }
+}
+@media (970px < width <= 1160px) {
+  .cabecera__fila { grid-template-columns: auto minmax(0, 1fr) auto; }
+}
+@media (min-width: 761px) {
+  .contacto__panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, max-content);
+  }
 }

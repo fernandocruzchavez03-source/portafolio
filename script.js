@@ -28,7 +28,7 @@ tema.addEventListener("click", () => {
   try {
     localStorage.setItem(clave, valor);
   } catch {
-    // El tema sigue activo durante la visita.
+    /* <-------- El tema sigue activo durante la visita. -------------> */
   }
 });
 
@@ -53,3 +53,46 @@ mostrarTema(obtenerTema());
 mostrarMenu(false);
 tema.hidden = false;
 menu.hidden = false;
+
+if ("IntersectionObserver" in window) {
+  const entradas = new IntersectionObserver((elementos, observador) => {
+    for (const elemento of elementos) {
+      if (elemento.isIntersecting) {
+        elemento.target.classList.add("entrada");
+        observador.unobserve(elemento.target);
+      }
+    }
+  });
+
+  document.querySelectorAll(".portada > div, .seccion > h2, #aprendizaje article, .perfil > div, .proyecto, .preguntas details, .contacto__panel, .pie").forEach((elemento) => {
+    entradas.observe(elemento);
+  });
+}
+
+/* <-------- Mostrar la barra al volver hacia arriba -------------> */
+const cabecera = document.querySelector(".cabecera");
+
+if (cabecera) {
+  let referencia = Math.max(0, window.scrollY);
+  let actualizacionPendiente = false;
+
+  window.addEventListener("scroll", () => {
+    if (actualizacionPendiente) return;
+    actualizacionPendiente = true;
+
+    window.requestAnimationFrame(() => {
+      actualizacionPendiente = false;
+      const posicion = Math.max(0, window.scrollY);
+      const distancia = posicion - referencia;
+      if (posicion < 40) {
+        cabecera.removeAttribute("data-oculta");
+      } else if (Math.abs(distancia) < 10) {
+        return;
+      } else {
+        const menuAbierto = menu.getAttribute("aria-expanded") === "true";
+        cabecera.toggleAttribute("data-oculta", distancia > 0 && posicion > 110 && !menuAbierto);
+      }
+      referencia = posicion;
+    });
+  }, { passive: true });
+}

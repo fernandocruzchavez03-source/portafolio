@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8">
@@ -10,6 +10,7 @@
 </head>
 <body id="inicio">
   <a class="salto" href="#contenido">Saltar al contenido</a>
+  <!-- ←──── Cabecera y navegación ────→ -->
   <header class="cabecera">
     <div class="cabecera__fila contenedor">
       <a class="cabecera__marca" href="#inicio"><span aria-hidden="true">FC</span> Fernando Cruz</a>
@@ -23,6 +24,7 @@
       </div>
     </div>
   </header>
+  <!-- ←──── Contenido principal ────→ -->
   <main class="contenedor" id="contenido" tabindex="-1">
     <section class="portada" aria-labelledby="nombre">
       <div>
@@ -59,9 +61,36 @@
       <p class="rotulo">Aprendizaje</p>
       <h2 id="titulo-aprendizaje">Lo que desarrollo</h2>
       <div class="cuadricula">
-        <article class="panel panel--ficha"><div class="panel__barra"><span class="etiqueta">Web</span><span>HTML / CSS / JS</span></div><div><h3>Desarrollo web</h3><p>Sitios que se adaptan a distintas pantallas, con estructura clara y controles accesibles.</p></div><div class="etiquetas"><span class="etiqueta">Responsive</span><span class="etiqueta">Accesibilidad</span></div></article>
-        <article class="panel panel--ficha"><div class="panel__barra"><span class="etiqueta">UI</span><span>Diseño</span></div><div><h3>Diseño de interfaces</h3><p>Jerarquía, tipografía y componentes para que una página sea fácil de entender y recorrer.</p></div><div class="etiquetas"><span class="etiqueta">Figma</span><span class="etiqueta">Prototipos</span></div></article>
-        <article class="panel panel--ficha"><div class="panel__barra"><span class="etiqueta">Práctica</span><span>Proyectos propios</span></div><div><h3>Experimentación</h3><p>Pruebo ideas con proyectos de distintos temas, desde un sitio para una cafetería hasta una interfaz de finanzas. También uso Blender para modelado 3D.</p></div><div class="etiquetas"><span class="etiqueta">Blender</span><span class="etiqueta">Interfaces</span></div></article>
+        <article class="panel panel--ficha">
+          <div class="panel__barra"><span class="etiqueta">Web</span><span>HTML / CSS / JS</span>
+          </div>
+          <div>
+            <h3>Desarrollo web</h3>
+            <p>Sitios que se adaptan a distintas pantallas, con estructura clara y controles accesibles.</p>
+          </div>
+          <div class="etiquetas"><span class="etiqueta">Responsive</span><span class="etiqueta">Accesibilidad</span>
+          </div>
+        </article>
+        <article class="panel panel--ficha">
+          <div class="panel__barra"><span class="etiqueta">UI</span><span>Diseño</span>
+          </div>
+          <div>
+            <h3>Diseño de interfaces</h3>
+            <p>Jerarquía, tipografía y componentes para que una página sea fácil de entender y recorrer.</p>
+          </div>
+          <div class="etiquetas"><span class="etiqueta">Figma</span><span class="etiqueta">Prototipos</span>
+          </div>
+        </article>
+        <article class="panel panel--ficha">
+          <div class="panel__barra"><span class="etiqueta">Práctica</span><span>Proyectos propios</span>
+          </div>
+          <div>
+            <h3>Experimentación</h3>
+            <p>Pruebo ideas con proyectos de distintos temas, desde un sitio para una cafetería hasta una interfaz de finanzas. También uso Blender para modelado 3D.</p>
+          </div>
+          <div class="etiquetas"><span class="etiqueta">Blender</span><span class="etiqueta">Interfaces</span>
+          </div>
+        </article>
       </div>
     </section>
     <section class="seccion" id="sobre-mi" aria-labelledby="titulo-perfil">
@@ -70,19 +99,94 @@
       <div class="perfil">
         <div class="panel panel--perfil">
           <div class="panel__barra"><span class="etiqueta">Mi proceso</span><span>De la idea al sitio</span></div>
-          <div class="tablero"><p class="rotulo">Cuaderno de trabajo</p><p class="panel__titular">Prototipo, construyo y reviso.</p><div class="tablero__cuadricula"><div class="tablero__dato"><small>01 / Diseño</small><strong>Organizar</strong></div><div class="tablero__dato"><small>02 / Código</small><strong>Probar</strong></div></div></div>
+          <div class="tablero">
+            <p class="rotulo">Cuaderno de trabajo</p>
+            <p class="panel__titular">Prototipo, construyo y reviso.</p>
+            <div class="tablero__cuadricula">
+              <div class="tablero__dato"><small>01 / Diseño</small><strong>Organizar</strong>
+              </div>
+              <div class="tablero__dato"><small>02 / Código</small><strong>Probar</strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="perfil__texto"><h3>Diseño y desarrollo para aprender haciendo.</h3><p>Soy Fernando Cruz, tengo 13 años y soy de Nuevo León, México. Empecé a construir sitios para entender cómo se conectan las decisiones de diseño con lo que ocurre en el navegador. También sé usar Blender para modelado 3D.</p><p>Mis proyectos me dejan practicar problemas distintos. En Alba Café, el punto de partida es cómo llevar la identidad de una cafetería a la web. En Exclusive Clean, el reto es organizar los servicios para que se encuentren con facilidad. Con FinanceTrack exploro cómo mostrar información financiera de forma clara, y JARVIS NEXUS es mi espacio para probar ideas de interfaz.</p><a class="boton" href="#proyectos">Conoce mis proyectos <span aria-hidden="true">↗</span></a></div>
+        <div class="perfil__texto">
+          <h3>Diseño y desarrollo para aprender haciendo.</h3>
+          <p>Soy Fernando Cruz, tengo 13 años y soy de Nuevo León, México. Empecé a construir sitios para entender cómo se conectan las decisiones de diseño con lo que ocurre en el navegador. También sé usar Blender para modelado 3D.</p>
+          <p>Mis proyectos me dejan practicar problemas distintos. En Alba Café, el punto de partida es cómo llevar la identidad de una cafetería a la web. En Exclusive Clean, el reto es organizar los servicios para que se encuentren con facilidad. Con FinanceTrack exploro cómo mostrar información financiera de forma clara, y JARVIS NEXUS es mi espacio para probar ideas de interfaz.</p><a class="boton" href="#proyectos">Conoce mis proyectos <span aria-hidden="true">↗</span></a>
+          </div>
       </div>
     </section>
     <section class="seccion" id="proyectos" aria-labelledby="titulo-proyectos">
       <p class="rotulo">Portafolio</p>
       <h2 id="titulo-proyectos">Proyectos seleccionados</h2>
       <div class="cuadricula cuadricula--proyectos">
-        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">01 / Web</span><span>Cafetería</span></div><div class="proyecto__visual proyecto__visual--alba" aria-hidden="true"><span class="proyecto__serie">01 / CAFÉ</span><span class="proyecto__lema">Alba<em>Café</em></span><span class="proyecto__taza"></span></div><div><h3>Alba Café</h3><p>Propuesta web para una cafetería, con el café como punto de partida para su identidad visual.</p></div><div class="etiquetas"><span class="etiqueta">Diseño web</span><span class="etiqueta">Identidad</span></div></div><div class="proyecto__pie"><span>Alba Café</span><a href="https://fernandocruzchavez03-source.github.io/Alba-Cafe-etapa3/" aria-label="Visitar Alba Café">Ver sitio ↗</a></div></article>
-        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">02 / Web</span><span>Sitio publicado</span></div><div class="proyecto__visual proyecto__visual--clean" aria-hidden="true"><span class="proyecto__serie">02 / WEB</span><span class="proyecto__lema">Exclusive<em>Clean</em></span></div><div><h3>Exclusive Clean</h3><p>Sitio que presenta servicios de limpieza y organiza su información para que se pueda consultar con facilidad.</p></div><div class="etiquetas"><span class="etiqueta">Sitio web</span></div></div><div class="proyecto__pie"><span>Exclusive Clean</span><a href="https://fernandocruzchavez03-source.github.io/Exclusive-Clean/" aria-label="Visitar Exclusive Clean">Ver sitio ↗</a></div></article>
-        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">03 / Interfaz</span><span>Finanzas</span></div><div class="proyecto__visual proyecto__visual--finance" aria-hidden="true"><span class="proyecto__serie">03 / PANEL</span><span class="proyecto__lema">Finance<em>Track</em></span><div class="proyecto__barras"><i></i><i></i><i></i><i></i><i></i></div></div><div><h3>FinanceTrack</h3><p>Proyecto sobre el seguimiento de las finanzas personales y la presentación clara de esa información.</p></div><div class="etiquetas"><span class="etiqueta">Panel</span><span class="etiqueta">Finanzas</span></div></div><p class="proyecto__pie">FinanceTrack <span>Proyecto personal</span></p></article>
-        <article class="proyecto"><div class="panel panel--ficha panel--proyecto"><div class="panel__barra"><span class="etiqueta">04 / Práctica</span><span>Experimental</span></div><div class="proyecto__visual proyecto__visual--nexus" aria-hidden="true"><span class="proyecto__serie">04 / LAB</span><span class="proyecto__lema">JARVIS<em>NEXUS</em></span><span class="proyecto__nucleo"></span></div><div><h3>JARVIS NEXUS</h3><p>Proyecto personal para explorar ideas de tecnología e interfaces.</p></div><div class="etiquetas"><span class="etiqueta">Experimentación</span></div></div><p class="proyecto__pie">JARVIS NEXUS <span>Proyecto personal</span></p></article>
+        <article class="proyecto">
+          <div class="panel panel--ficha panel--proyecto">
+            <div class="panel__barra"><span class="etiqueta">01 / Web</span><span>Cafetería</span>
+            </div>
+            <div class="proyecto__visual proyecto__visual--alba" aria-hidden="true"><span class="proyecto__serie">01 / CAFÉ</span><span class="proyecto__lema">Alba<em>Café</em></span><span class="proyecto__taza"></span>
+            </div>
+            <div>
+              <h3>Alba Café</h3>
+              <p>Propuesta web para una cafetería, con el café como punto de partida para su identidad visual.</p>
+            </div>
+            <div class="etiquetas"><span class="etiqueta">Diseño web</span><span class="etiqueta">Identidad</span>
+            </div>
+          </div>
+          <div class="proyecto__pie"><span>Alba Café</span><a href="https://fernandocruzchavez03-source.github.io/Alba-Cafe-etapa3/" aria-label="Visitar Alba Café">Ver sitio ↗</a>
+          </div>
+        </article>
+        <article class="proyecto">
+          <div class="panel panel--ficha panel--proyecto">
+            <div class="panel__barra"><span class="etiqueta">02 / Web</span><span>Sitio publicado</span>
+            </div>
+            <div class="proyecto__visual proyecto__visual--clean" aria-hidden="true"><span class="proyecto__serie">02 / WEB</span><span class="proyecto__lema">Exclusive<em>Clean</em></span>
+            </div>
+            <div>
+              <h3>Exclusive Clean</h3>
+              <p>Sitio que presenta servicios de limpieza y organiza su información para que se pueda consultar con facilidad.</p>
+            </div>
+            <div class="etiquetas"><span class="etiqueta">Sitio web</span>
+            </div>
+          </div>
+          <div class="proyecto__pie"><span>Exclusive Clean</span><a href="https://fernandocruzchavez03-source.github.io/Exclusive-Clean/" aria-label="Visitar Exclusive Clean">Ver sitio ↗</a>
+          </div>
+        </article>
+        <article class="proyecto">
+          <div class="panel panel--ficha panel--proyecto">
+            <div class="panel__barra"><span class="etiqueta">03 / Interfaz</span><span>Finanzas</span>
+            </div>
+            <div class="proyecto__visual proyecto__visual--finance" aria-hidden="true"><span class="proyecto__serie">03 / PANEL</span><span class="proyecto__lema">Finance<em>Track</em></span>
+              <div class="proyecto__barras"><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <div>
+              <h3>FinanceTrack</h3>
+              <p>Proyecto sobre el seguimiento de las finanzas personales y la presentación clara de esa información.</p>
+            </div>
+            <div class="etiquetas"><span class="etiqueta">Panel</span><span class="etiqueta">Finanzas</span>
+            </div>
+          </div>
+          <p class="proyecto__pie">FinanceTrack <span>Proyecto personal</span>
+          </p>
+        </article>
+        <article class="proyecto">
+          <div class="panel panel--ficha panel--proyecto">
+            <div class="panel__barra"><span class="etiqueta">04 / Práctica</span><span>Experimental</span>
+            </div>
+            <div class="proyecto__visual proyecto__visual--nexus" aria-hidden="true"><span class="proyecto__serie">04 / LAB</span><span class="proyecto__lema">JARVIS<em>NEXUS</em></span><span class="proyecto__nucleo"></span>
+            </div>
+            <div>
+              <h3>JARVIS NEXUS</h3>
+              <p>Proyecto personal para explorar ideas de tecnología e interfaces.</p>
+            </div>
+            <div class="etiquetas"><span class="etiqueta">Experimentación</span>
+            </div>
+          </div>
+          <p class="proyecto__pie">JARVIS NEXUS <span>Proyecto personal</span>
+          </p>
+        </article>
       </div>
     </section>
     <section class="seccion" aria-labelledby="titulo-preguntas">
@@ -109,6 +213,7 @@
       </div>
     </section>
   </main>
+  <!-- ←──── Pie de página ────→ -->
   <footer class="pie contenedor">
     <div class="pie__fila">
       <div class="pie__identidad">
